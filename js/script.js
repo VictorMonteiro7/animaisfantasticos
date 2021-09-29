@@ -7,6 +7,7 @@ import initModal from './modules/modal.js';
 import initToolTip from './modules/tooltip.js';
 import initDropdownMenu from './modules/dropdownMenu.js';
 import initMenuMobile from './modules/menuMobile.js';
+import initAnimaNumeros from './modules/animaNumeros.js';
 
 initTabMenu()
 initAccordion();
@@ -16,6 +17,7 @@ initModal();
 initToolTip();
 initDropdownMenu();
 initMenuMobile();
+initAnimaNumeros();
 
 const animacoes = document.querySelectorAll('[data-anime]');
 animacoes.forEach(secao=>{
