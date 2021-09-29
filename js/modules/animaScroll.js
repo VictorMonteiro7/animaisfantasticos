@@ -5,9 +5,9 @@ export default function initAnimacaoScroll(){
     sections.forEach(section=>{
       const sectionTop = section.getBoundingClientRect().top;
       const isSectionVisible = sectionTop - windowMetade;
-      if(isSectionVisible < 0){
-        section.classList.add('ativo')
-      }
+        if(isSectionVisible < 0 && !section.classList.contains('ativo')){
+          section.classList.add('ativo')
+        }
     })
   }
   animaScroll();
