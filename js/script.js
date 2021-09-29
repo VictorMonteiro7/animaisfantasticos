@@ -5,6 +5,7 @@ import initScrollSuave from './modules/scrollSuave.js';
 import initAnimacaoScroll from './modules/animaScroll.js'
 import initModal from './modules/modal.js';
 import initToolTip from './modules/tooltip.js';
+import initDropdownMenu from './modules/dropdownMenu.js';
 
 initTabMenu()
 initAccordion();
@@ -12,6 +13,7 @@ initScrollSuave();
 initAnimacaoScroll();
 initModal();
 initToolTip();
+initDropdownMenu();
 
 const animacoes = document.querySelectorAll('[data-anime]');
 animacoes.forEach(secao=>{
