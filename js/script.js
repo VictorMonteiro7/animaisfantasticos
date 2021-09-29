@@ -6,6 +6,7 @@ import initAnimacaoScroll from './modules/animaScroll.js'
 import initModal from './modules/modal.js';
 import initToolTip from './modules/tooltip.js';
 import initDropdownMenu from './modules/dropdownMenu.js';
+import initMenuMobile from './modules/menuMobile.js';
 
 initTabMenu()
 initAccordion();
@@ -14,6 +15,7 @@ initAnimacaoScroll();
 initModal();
 initToolTip();
 initDropdownMenu();
+initMenuMobile();
 
 const animacoes = document.querySelectorAll('[data-anime]');
 animacoes.forEach(secao=>{
