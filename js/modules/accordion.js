@@ -1,12 +1,26 @@
 import {activeClass} from '../script.js';
-export default function initAccordion(){
-  function activeAccordion(event){
-    this.classList.toggle(activeClass);
-    this.nextElementSibling.classList.toggle(activeClass);
+export default class Accordion{
+  constructor(list){    
+    this.accordionList = document.querySelectorAll(list);
+    this.toggleAccordion = this.toggleAccordion.bind(this);
   }
-  
-  const accordionList = document.querySelectorAll('[data-accordion] dt');  
-  accordionList.forEach(item=>{    
-    item.addEventListener('click',activeAccordion);    
-  })  
+  toggleAccordion(item){
+    item.classList.toggle(activeClass);
+    item.nextElementSibling.classList.toggle(activeClass);
+  }
+
+  addAccordionEvent(){
+    this.accordionList.forEach(item=>{    
+      item.addEventListener('click',()=>this.toggleAccordion(item));    
+    })  
+  }
+
+  init(){
+    if(this.accordionList.length){
+      this.toggleAccordion(this.accordionList[0]);
+      this.addAccordionEvent();
+    }
+  }
+
+
 }
